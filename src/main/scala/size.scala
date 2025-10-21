@@ -25,4 +25,4 @@ object scale:
         case Rectangle(w, h) => Rectangle(w * scale, h * scale)
         case Ellipse(w,h) => Ellipse(w * scale, h * scale)
         case Location(x, y, shape) => Location(x * scale, y * scale, scaleShape(shape, scale))
-        case Group(shapes*) => Group(shapes.map(child => scaleShape(shape, scale))*)
+        case Group(shapes*) => Group(shapes.map(child => scaleShape(child, scale))*)
